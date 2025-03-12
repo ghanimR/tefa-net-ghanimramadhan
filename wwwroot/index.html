@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        input, textarea {
+            display: block;
+            margin: 10px 0;
+            width: 300px;
+        }
+
+        button {
+            margin: 5px 0;
+        }
+
+        .todo-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My To-Do List</h1>
+
+    <h3>Add New Todo</h3>
+    <input type="text" id="title" placeholder="Title" />
+    <textarea id="description" placeholder="Description"></textarea>
+    <button id="addTodo">Add Todo</button>
+
+    <h3>Todo Items</h3>
+    <div id="todoList"></div>
+
+    <script>
+        const API_URL = "https://localhost:7266/api/todos"; 
+
+    function loadTodos() {
+      $.get(API_URL, function(data) {
+        $("#todoList").empty();
+        data.forEach(todo => {
+          $("#todoList").append(`
+            <div class="todo-item" data-id="${todo.id}">
+              <strong>${todo.title}</strong><br/>
+              <p>${todo.description || ''}</p>
+              <button class="editBtn">Edit</button>
+              <button class="deleteBtn">Delete</button>
+            </div>
+          `);
+        });
+      });
+    }
+
+    $("#addTodo").click(function() {
+      const newTodo = {
+        title: $("#title").val(),
+        description: $("#description").val()
+      };
+      $.post(API_URL, newTodo, function() {
+        loadTodos();
+        $("#title").val('');
+        $("#description").val('');
+      });
+    });
+
+    $(document).on("click", ".deleteBtn", function() {
+      const id = $(this).parent().data("id");
+      $.ajax({
+        url: `${API_URL}/${id}`,
+        type: "DELETE",
+        success: loadTodos
+      });
+    });
+
+    $(document).on("click", ".editBtn", function() {
+      const parent = $(this).parent();
+      const id = parent.data("id");
+      const currentTitle = prompt("Edit title:", parent.find("strong").text());
+      const currentDesc = prompt("Edit description:", parent.find("p").text());
+
+      if (currentTitle !== null) {
+        $.ajax({
+          url: `${API_URL}/${id}`,
+          type: "PUT",
+          contentType: "application/json",
+          data: JSON.stringify({
+            id: id,
+            title: currentTitle,
+            description: currentDesc
+          }),
+          success: loadTodos
+        });
+      }
+    });
+
+    loadTodos();
+    </script>
+</body>
+</html>

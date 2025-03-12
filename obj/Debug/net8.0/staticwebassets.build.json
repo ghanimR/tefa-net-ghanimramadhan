@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "h5oDqFLxZhiWWj1d6NMGNweDKCuWg1L4mL1pkWEV09k=",
+  "Source": "TodoAPI",
+  "BasePath": "_content/TodoAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TodoAPI\\wwwroot",
+      "Source": "TodoAPI",
+      "ContentRoot": "E:\\JOBS\\Project NET\\Todolist\\TodoAPI\\TodoAPI\\wwwroot\\",
+      "BasePath": "_content/TodoAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\JOBS\\Project NET\\Todolist\\TodoAPI\\TodoAPI\\wwwroot\\index.html",
+      "SourceId": "TodoAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\JOBS\\Project NET\\Todolist\\TodoAPI\\TodoAPI\\wwwroot\\",
+      "BasePath": "_content/TodoAPI",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "04ax8usjia",
+      "Integrity": "cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.04ax8usjia.html",
+      "AssetFile": "E:\\JOBS\\Project NET\\Todolist\\TodoAPI\\TodoAPI\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2759"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 05:30:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "04ax8usjia"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "E:\\JOBS\\Project NET\\Todolist\\TodoAPI\\TodoAPI\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2759"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 05:30:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM="
+        }
+      ]
+    }
+  ]
+}
