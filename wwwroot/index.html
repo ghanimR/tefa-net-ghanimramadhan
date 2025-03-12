@@ -42,65 +42,76 @@
     <script>
         const API_URL = "https://localhost:7266/api/todos"; 
 
-    function loadTodos() {
-      $.get(API_URL, function(data) {
-        $("#todoList").empty();
-        data.forEach(todo => {
-          $("#todoList").append(`
-            <div class="todo-item" data-id="${todo.id}">
-              <strong>${todo.title}</strong><br/>
-              <p>${todo.description || ''}</p>
-              <button class="editBtn">Edit</button>
-              <button class="deleteBtn">Delete</button>
-            </div>
-          `);
-        });
-      });
-    }
+        function loadTodos() {
+            $.get(API_URL, function (data) {
+                $("#todoList").empty();
+                data.forEach(todo => {
+                    $("#todoList").append(`
+                <div class="todo-item" data-id="${todo.id}">
+                  <strong>${todo.title}</strong><br/>
+                  <p>${todo.description || ''}</p>
+                  <button class="editBtn">Edit</button>
+                  <button class="deleteBtn">Delete</button>
+                </div>
+              `);
+                });
+            });
+        }
 
-    $("#addTodo").click(function() {
-      const newTodo = {
-        title: $("#title").val(),
-        description: $("#description").val()
-      };
-      $.post(API_URL, newTodo, function() {
+        $("#addTodo").click(function () {
+            const newTodo = {
+                title: $("#title").val(),
+                description: $("#description").val()
+            };
+
+            $.ajax({
+                url: API_URL,
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(newTodo),
+                success: function () {
+                    loadTodos();
+                    $("#title").val('');
+                    $("#description").val('');
+                },
+                error: function (xhr) {
+                    console.error("Gagal menambahkan:", xhr.status, xhr.responseText);
+                }
+            });
+
+        });
+
+        $(document).on("click", ".deleteBtn", function () {
+            const id = $(this).parent().data("id");
+            $.ajax({
+                url: `${API_URL}/${id}`,
+                type: "DELETE",
+                success: loadTodos
+            });
+        });
+
+        $(document).on("click", ".editBtn", function () {
+            const parent = $(this).parent();
+            const id = parent.data("id");
+            const currentTitle = prompt("Edit title:", parent.find("strong").text());
+            const currentDesc = prompt("Edit description:", parent.find("p").text());
+
+            if (currentTitle !== null) {
+                $.ajax({
+                    url: `${API_URL}/${id}`,
+                    type: "PUT",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        id: id,
+                        title: currentTitle,
+                        description: currentDesc
+                    }),
+                    success: loadTodos
+                });
+            }
+        });
+
         loadTodos();
-        $("#title").val('');
-        $("#description").val('');
-      });
-    });
-
-    $(document).on("click", ".deleteBtn", function() {
-      const id = $(this).parent().data("id");
-      $.ajax({
-        url: `${API_URL}/${id}`,
-        type: "DELETE",
-        success: loadTodos
-      });
-    });
-
-    $(document).on("click", ".editBtn", function() {
-      const parent = $(this).parent();
-      const id = parent.data("id");
-      const currentTitle = prompt("Edit title:", parent.find("strong").text());
-      const currentDesc = prompt("Edit description:", parent.find("p").text());
-
-      if (currentTitle !== null) {
-        $.ajax({
-          url: `${API_URL}/${id}`,
-          type: "PUT",
-          contentType: "application/json",
-          data: JSON.stringify({
-            id: id,
-            title: currentTitle,
-            description: currentDesc
-          }),
-          success: loadTodos
-        });
-      }
-    });
-
-    loadTodos();
     </script>
 </body>
 </html>

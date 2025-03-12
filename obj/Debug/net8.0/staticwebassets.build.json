@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h5oDqFLxZhiWWj1d6NMGNweDKCuWg1L4mL1pkWEV09k=",
+  "Hash": "qn0pBJOlY5eo1LfdITk7N9hv/AD6ALGNYhwFDqRl9pI=",
   "Source": "TodoAPI",
   "BasePath": "_content/TodoAPI",
   "Mode": "Default",
@@ -31,59 +31,14 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "04ax8usjia",
-      "Integrity": "cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM=",
+      "Fingerprint": "s2pbsdyc3z",
+      "Integrity": "tGNaa7MMuTIdtC3BfRCFZWZL5aymwJmFU5KRQNbl4vw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
     }
   ],
   "Endpoints": [
-    {
-      "Route": "index.04ax8usjia.html",
-      "AssetFile": "E:\\JOBS\\Project NET\\Todolist\\TodoAPI\\TodoAPI\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2759"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 05:30:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "04ax8usjia"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM="
-        }
-      ]
-    },
     {
       "Route": "index.html",
       "AssetFile": "E:\\JOBS\\Project NET\\Todolist\\TodoAPI\\TodoAPI\\wwwroot\\index.html",
@@ -95,7 +50,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2759"
+          "Value": "3482"
         },
         {
           "Name": "Content-Type",
@@ -103,11 +58,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM=\""
+          "Value": "\"tGNaa7MMuTIdtC3BfRCFZWZL5aymwJmFU5KRQNbl4vw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 05:30:41 GMT"
+          "Value": "Wed, 12 Mar 2025 07:21:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -117,7 +72,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cHHifEMgoYEyb1/KOkAA/hmldH9MbZe4JGXIItlMZfM="
+          "Value": "sha256-tGNaa7MMuTIdtC3BfRCFZWZL5aymwJmFU5KRQNbl4vw="
+        }
+      ]
+    },
+    {
+      "Route": "index.s2pbsdyc3z.html",
+      "AssetFile": "E:\\JOBS\\Project NET\\Todolist\\TodoAPI\\TodoAPI\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3482"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tGNaa7MMuTIdtC3BfRCFZWZL5aymwJmFU5KRQNbl4vw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 07:21:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s2pbsdyc3z"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tGNaa7MMuTIdtC3BfRCFZWZL5aymwJmFU5KRQNbl4vw="
         }
       ]
     }

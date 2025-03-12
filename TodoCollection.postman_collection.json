@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "5ba321c9-ac0c-49c9-b631-2993030d96b2",
+		"name": "TodoCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43001842"
+	},
+	"item": [
+		{
+			"name": "Create todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Belajar .NET\",\r\n  \"description\": \"Latihan CRUD API\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7266/api/todos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7266",
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7266/api/todos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7266",
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 2,\r\n  \"title\": \"Belajar .NET (Update)\",\r\n  \"description\": \"Edit deskripsi\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7266/api/todos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7266",
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
